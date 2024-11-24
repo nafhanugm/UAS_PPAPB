@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "39488993501",
+    "firebase_url": "https://woobox-47bc3.firebaseio.com",
+    "project_id": "woobox-47bc3",
+    "storage_bucket": "woobox-47bc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39488993501:android:0acb73b258f4a87b",
+        "android_client_info": {
+          "package_name": "com.gmits.woobox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39488993501-fhjsbd4jbafj5m0mlrcp0jn3d39gfu8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7MMD7CBq4dMnDPZDg8ea0VR-2pVJCJ3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39488993501-fhjsbd4jbafj5m0mlrcp0jn3d39gfu8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39488993501:android:76929334553f8b2a",
+        "android_client_info": {
+          "package_name": "com.twowords.woobox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39488993501-fhjsbd4jbafj5m0mlrcp0jn3d39gfu8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7MMD7CBq4dMnDPZDg8ea0VR-2pVJCJ3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39488993501-fhjsbd4jbafj5m0mlrcp0jn3d39gfu8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "count": 16,
+    "description": "",
+    "id": 45,
+    "isSelected": false,
+    "menu_order": 0,
+    "name": "Xiaomi",
+    "parent": 0,
+    "slug": "men"
+  },
+  {
+    "count": 6,
+    "description": "",
+    "id": 18,
+    "isSelected": false,
+    "menu_order": 0,
+    "name": "Samsung",
+    "parent": 16,
+    "slug": "women"
+  },
+  {
+    "count": 1,
+    "description": "",
+    "id": 53,
+    "isSelected": false,
+    "menu_order": 0,
+    "name": "Apple",
+    "parent": 0,
+    "slug": "Kids"
+  }
+]
