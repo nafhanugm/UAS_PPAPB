@@ -33,7 +33,6 @@ class AdminProductAdapter(
                 }
 
                 btnDeleteProduct.setOnClickListener{
-                    Log.d("delete", "clicked")
                     onDeleteClick(product)
                 }
 

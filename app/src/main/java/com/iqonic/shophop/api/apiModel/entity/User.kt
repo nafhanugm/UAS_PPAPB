@@ -19,5 +19,13 @@ data class UserModel(
     val email: String?,
 
     @SerializedName("profile_image")
-    val profileImage: String?
+    val profileImage: String?,
+
+    @SerializedName("role")
+    val role: UserRole? = UserRole.USER
 )
+
+enum class UserRole(val value: String) {
+    ADMIN("ADMIN"),
+    USER("USER")
+}

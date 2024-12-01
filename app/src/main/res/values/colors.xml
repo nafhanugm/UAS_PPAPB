@@ -10,6 +10,8 @@
     <color name="black">#000000</color>
     <color name="view_color">#eaeaea</color>
     <color name="transparent">#00000000</color>
+    <color name="skeleton_light_color">#F0F0F0</color>
+    <color name="skeleton_shimmer_color">#E0E0E0</color>
 
     <color name="background_color">#FCFDFD</color>
     <color name="editText_background">#F1F1F1</color>

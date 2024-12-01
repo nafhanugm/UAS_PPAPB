@@ -192,9 +192,9 @@ class HomeFragment : BaseFragment() {
                 putExtra(Constants.KeyIntent.VIEWALLID, Constants.viewAllCode.NEWEST)
             }
         }
-        btnAdmin.onClick {
-            activity?.launchActivity<AdminActivity>()
-        }
+//        btnAdmin.onClick {
+//            activity?.launchActivity<AdminActivity>()
+//        }
 
     }
 

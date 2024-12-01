@@ -11,8 +11,10 @@ import android.widget.RelativeLayout
 import androidx.lifecycle.lifecycleScope
 import com.iqonic.shophop.AppBaseActivity
 import com.iqonic.shophop.R
+import com.iqonic.shophop.activity.AdminActivity
 import com.iqonic.shophop.activity.DashBoardActivity
 import com.iqonic.shophop.activity.SignInUpActivity
+import com.iqonic.shophop.api.apiModel.entity.UserRole
 import com.iqonic.shophop.api.repository.UserRepository
 import com.iqonic.shophop.models.RequestModel
 import com.iqonic.shophop.utils.OTPEditText
@@ -99,7 +101,12 @@ class SignInFragment : BaseFragment() {
                             signIn(user.id!!) {
                                 // Jika login berhasil, lanjutkan ke halaman dashboard
                                 activity?.finish()
-                                activity?.launchActivityWithNewTask<DashBoardActivity>()
+                                if (user.role == UserRole.ADMIN) {
+                                    activity?.launchActivityWithNewTask<AdminActivity>()
+                                } else {
+                                    activity?.launchActivityWithNewTask<DashBoardActivity>()
+                                }
+
                             }
                         }
                     } else {

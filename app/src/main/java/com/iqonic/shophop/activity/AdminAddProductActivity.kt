@@ -29,7 +29,7 @@ class AdminAddProductActivity:AppCompatActivity() {
                 product.description = edtEditProductDescription.text.toString()
                 product.price = edtEditProductPrice.text.toString()
 
-                product.id = null
+                product.id =null
 
                 // Add product to the database
                 ProductRepository.addProduct(product){

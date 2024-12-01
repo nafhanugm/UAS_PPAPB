@@ -31,12 +31,6 @@
                 app:dot_height="@dimen/spacing_control"
                 app:dot_width="@dimen/spacing_control" />
         </RelativeLayout>
-        <Button
-            android:id="@+id/btnAdmin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Admin"
-            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvCategory"
