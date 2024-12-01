@@ -166,8 +166,17 @@
                 android:layout_marginStart="@dimen/spacing_standard_new"
                 android:layout_marginTop="@dimen/_14sdp"
                 android:layout_marginEnd="@dimen/spacing_standard_new"
-                android:layout_marginBottom="@dimen/spacing_large"
                 android:text="@string/btn_sign_out" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteAcc"
+                style="@style/MaterialButtonStyle.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="@string/btn_delete_acc" />
 
         </LinearLayout>
     </ScrollView>

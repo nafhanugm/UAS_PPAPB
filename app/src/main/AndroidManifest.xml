@@ -17,6 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -119,6 +121,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.QuickPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AdminActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.AdminEditProductActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.AdminAddProductActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.AdminDetailProductActivity"
             android:screenOrientation="portrait" />
 
         <provider

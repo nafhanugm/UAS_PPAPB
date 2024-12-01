@@ -254,8 +254,8 @@
     <string name="msg_success_card">Card Added Successfully</string>
     <string name="lbl_not_verified">Not Verified</string>
     <string name="lbl_verified">Verified Buyer</string>
-    <string name="lbl_hop">hop</string>
-    <string name="lbl_shop">Shop</string>
+    <string name="lbl_hop">Phon</string>
+    <string name="lbl_shop">Phon</string>
     <string name="desc_slider">slider</string>
     <string name="hint_no_products">No Products</string>
     <string name="lbl_order_pend">Order Pending</string>
@@ -284,6 +284,11 @@
     <string name="error_user_exist">User email is exist, try using another email</string>
     <string name="error_user_already_exists">User already exist.\n</string>
     <string name="error_invalid_credentials">username or password invalid</string>
+    <string name="btn_delete_acc">Delete Account</string>
+    <string name="lbl_delete_account_confirmation">Are you sure want to delete account?</string>
+    <string name="msg_something_went_wrong">Something went wrong\n</string>
+    <string name="text_edit_produk">Edit Produk</string>
+    <string name="text_hapus_produk">Hapus Produk</string>
 
     <string-array name="category_array">
         <item>Xiaomi</item>

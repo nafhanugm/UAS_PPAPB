@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestHistoryConfig">
+    <option name="historyList">
+      <list>
+        <ResponseHistory>
+          <option name="className" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="API_URL" />
+          <option name="enableProject" value="shophop_droid_design" />
+          <option name="method" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="methodDescription" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="url" value="https://ppbo-api.vercel.app/4hkpR/products" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: https://ppbo-api.vercel.app/4hkpR/products&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Fast Request/2024.1.8.1&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[]" />
+          <option name="url" value="https://ppbo-api.vercel.app/4hkpR/products" />
+        </ResponseHistory>
+      </list>
+    </option>
+  </component>
+</project>

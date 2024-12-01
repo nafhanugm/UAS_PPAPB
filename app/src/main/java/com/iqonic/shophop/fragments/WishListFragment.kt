@@ -86,7 +86,7 @@ class WishListFragment : BaseFragment() {
 
     fun wishListItemChange() {
         if (rvWishList != null) {
-            val mWishList = getWishlist()
+            val mWishList = getWishlist(activity!!)
             mListAdapter.addItems(mWishList)
             if (mWishList.size == 0) rlNoData.show()
             else rlNoData.hide()

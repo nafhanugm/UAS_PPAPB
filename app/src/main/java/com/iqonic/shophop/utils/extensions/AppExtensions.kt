@@ -55,6 +55,8 @@ fun isLoggedIn(): Boolean = getSharedPrefInstance().getBooleanValue(IS_LOGGED_IN
 
 fun getUserId(): String = getSharedPrefInstance().getStringValue(USER_ID)
 
+fun getUserEmail(): String = getSharedPrefInstance().getStringValue(USER_EMAIL)
+
 fun getUserFullName(): String {
     return when {
         isLoggedIn() -> (getSharedPrefInstance().getStringValue(USER_FIRST_NAME, "Julie") + " " + getSharedPrefInstance().getStringValue(

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentProjectLocalConfig">
+    <option name="domain" value="https://ppbo-api.vercel.app/4hkpR/products" />
+    <option name="enableEnv" value="API_URL" />
+    <option name="enableProject" value="shophop_droid_design" />
+    <option name="initFlag" value="1" />
+  </component>
+</project>

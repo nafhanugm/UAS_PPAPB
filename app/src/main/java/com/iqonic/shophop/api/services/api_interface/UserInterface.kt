@@ -4,6 +4,7 @@ import com.iqonic.shophop.api.apiModel.entity.UserModel
 import com.iqonic.shophop.api.apiModel.response.PostResponse
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
@@ -18,4 +19,7 @@ interface UserInterface {
 
     @POST("users/{id}")
     fun updateUser(@Path("id") id: String, @Body user: UserModel): Call<PostResponse>
+
+    @DELETE("users/{id}")
+    fun deleteUser(@Path("id") id: String): Call<PostResponse>
 }

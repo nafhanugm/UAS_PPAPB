@@ -129,6 +129,39 @@ class UserRepository {
                 }
             })
         }
+
+        suspend fun deleteUser(email: String): Result<Boolean> = suspendCoroutine { continuation ->
+            ApiClient.getInstance().getUsers().enqueue(object : Callback<List<UserModel>> {
+                override fun onFailure(call: Call<List<UserModel>>, t: Throwable) {
+                    continuation.resume(Result.failure(t))
+                }
+
+                override fun onResponse(call: Call<List<UserModel>>, response: Response<List<UserModel>>) {
+                    try {
+                        val user = response.body()?.find { it.email == email }
+                        if (user != null) {
+                            ApiClient.getInstance().deleteUser(user.id!!).enqueue(object : Callback<PostResponse> {
+                                override fun onFailure(call: Call<PostResponse>, t: Throwable) {
+                                    continuation.resume(Result.failure(t))
+                                }
+
+                                override fun onResponse(call: Call<PostResponse>, response: Response<PostResponse>) {
+                                    if (response.isSuccessful) {
+                                        continuation.resume(Result.success(true))
+                                    } else {
+                                        continuation.resume(Result.failure(Exception("Failed to delete user")))
+                                    }
+                                }
+                            })
+                        } else {
+                            continuation.resume(Result.failure(Exception("User not found")))
+                        }
+                    } catch (e: Exception) {
+                        continuation.resume(Result.failure(e))
+                    }
+                }
+            })
+        }
     }
 
 

@@ -191,6 +191,7 @@ class ViewAllProductFragment : BaseFragment() {
             mGridAdapter.clearData()
             list.clear()
             it.forEach { model ->
+                Log.e("on_sale", model.toString())
                 if (model.on_sale) {
                     list.add(model)
                     mListAdapter.addNewItem(model)

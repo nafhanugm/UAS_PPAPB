@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvDetailProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="Nama Produk"/>
+
+        <TextView
+            android:id="@+id/tvDetailProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Deskripsi produk"/>
+
+        <TextView
+            android:id="@+id/tvDetailProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Rp 100.000"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginTop="@dimen/_10sdp"
+            style="@style/MaterialButtonStyle.Filled"
+            android:id="@+id/btnBack"/>
+    </LinearLayout>
+</layout>

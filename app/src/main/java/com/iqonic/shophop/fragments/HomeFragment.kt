@@ -1,12 +1,14 @@
 package com.iqonic.shophop.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.iqonic.shophop.AppBaseActivity
 import com.iqonic.shophop.R
+import com.iqonic.shophop.activity.AdminActivity
 import com.iqonic.shophop.activity.DashBoardActivity
 import com.iqonic.shophop.activity.SearchActivity
 import com.iqonic.shophop.activity.SubCategoryActivity
@@ -139,7 +141,7 @@ class HomeFragment : BaseFragment() {
     private fun listAllProducts() {
         listAllProducts {
             mNewestProductAdapter?.setModelSize(5)
-            mNewestProductAdapter?.addItems(it)
+            mNewestProductAdapter?.addItems(ArrayList(it.slice(1 until 6)))
 
             it.forEach { productModel ->
                 if (productModel.featured) {
@@ -190,6 +192,10 @@ class HomeFragment : BaseFragment() {
                 putExtra(Constants.KeyIntent.VIEWALLID, Constants.viewAllCode.NEWEST)
             }
         }
+        btnAdmin.onClick {
+            activity?.launchActivity<AdminActivity>()
+        }
+
     }
 
     private fun setRecyclerView(recyclerView: RecyclerView?) {

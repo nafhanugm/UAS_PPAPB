@@ -2,11 +2,14 @@ package com.iqonic.shophop.activity
 
 import android.app.Activity
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
 import com.iqonic.shophop.AppBaseActivity
 import com.iqonic.shophop.R
+import com.iqonic.shophop.api.repository.UserRepository
 import com.iqonic.shophop.utils.extensions.*
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.coroutines.launch
 
 class AccountActivity : AppBaseActivity() {
 
@@ -27,6 +30,30 @@ class AccountActivity : AppBaseActivity() {
             })
             dialog.show()
         }
+
+        btnDeleteAcc.onClick {
+            var isClicked = false
+            val dialog = getAlertDialog(getString(R.string.lbl_delete_account_confirmation), onPositiveClick = { _, _ ->
+                if (!isClicked) {
+                    isClicked = true
+                    lifecycleScope.launch {
+                        val result = UserRepository.deleteUser(getUserEmail())
+                        if (result.isSuccess) {
+                            clearLoginPref()
+                            launchActivityWithNewTask<DashBoardActivity> ()
+                        } else {
+                            snackBar(result.exceptionOrNull()?.message ?: getString(R.string.msg_something_went_wrong))
+                        }
+                    }
+                }
+            }, onNegativeClick = { dialog, _ ->
+                dialog.dismiss()
+            })
+
+            dialog.show()
+
+        }
+
         tvOrders.onClick {
             launchActivity<OrderActivity>()
         }

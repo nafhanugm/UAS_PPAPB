@@ -1,6 +1,8 @@
 package com.iqonic.shophop.utils.extensions
 
 import android.app.Activity
+import android.content.Context
+import android.util.Log
 import com.iqonic.shophop.ShopHopApp
 import com.iqonic.shophop.models.*
 import com.iqonic.shophop.utils.Constants
@@ -10,8 +12,13 @@ import com.iqonic.shophop.utils.Constants.AssetFiles.PRODUCTS
 import com.iqonic.shophop.utils.Constants.AssetFiles.REVIEWS
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.iqonic.shophop.db.DAO.WishListDAO
+import com.iqonic.shophop.db.Entity.WishListRoom
+import com.iqonic.shophop.db.ShopDatabase
 import org.json.JSONObject
 import java.util.*
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 import kotlin.collections.ArrayList
 
 fun productsFromAssets(onApiSuccess: (ArrayList<ProductModel>) -> Unit) =
@@ -120,8 +127,36 @@ fun getJsonString(file: String): String =
         it.readText()
     }
 
-fun getWishlist(): ArrayList<WishList> {
-    return if (getSharedPrefInstance().getStringValue(Constants.SharedPref.WISHLIST_DATA).isEmpty()) {
+fun getWishlist(context: Context?=null): ArrayList<WishList> {
+
+    if (context != null) {
+        lateinit var mWishListDAO: WishListDAO
+        val executorService: ExecutorService = Executors.newSingleThreadExecutor()
+        val db = ShopDatabase.getDatabase(context)
+        mWishListDAO = db!!.wishlistDAO()!!
+
+        val list = ArrayList<WishList>()
+
+        executorService.execute {
+            mWishListDAO.allWishList.forEach {
+                Log.e("WishList", it.name.toString())
+                val wishList = WishList()
+                wishList.average_rating = it.average_rating
+                wishList.colors = Gson().fromJson(it.colors, object : TypeToken<ArrayList<String>>() {}.type)
+                wishList.image = it.image
+                wishList.name = it.name
+                wishList.regular_price = it.regular_price
+                wishList.sale_price = it.sale_price
+                wishList.size = Gson().fromJson(it.size, object : TypeToken<ArrayList<String>>() {}.type)
+                wishList.product_id = it.product_id
+                wishList.item_id = it.item_id
+                list.add(wishList)
+            }
+        }
+        
+        return list
+    } else {
+            return if (getSharedPrefInstance().getStringValue(Constants.SharedPref.WISHLIST_DATA).isEmpty()) {
         ArrayList()
     } else {
         Gson().fromJson(
@@ -129,10 +164,16 @@ fun getWishlist(): ArrayList<WishList> {
             object : TypeToken<ArrayList<WishList>>() {}.type
         )
     }
+    }
 }
 
 fun Activity.addToWishList(product: ProductModel, onApiSuccess: (String?) -> Unit) {
-    val id = isFavourite(product.id)
+    val id = isFavourite(product.id ?: "")
+    lateinit var mWishListDAO: WishListDAO
+    var executorService: ExecutorService = Executors.newSingleThreadExecutor()
+    val db = ShopDatabase.getDatabase(this)
+    mWishListDAO = db!!.wishlistDAO()!!
+
     if (id != "-1") {
         onApiSuccess(id)
     } else {
@@ -170,6 +211,19 @@ fun Activity.addToWishList(product: ProductModel, onApiSuccess: (String?) -> Uni
                 }
             }
         }
+
+        val wishListRoom = WishListRoom()
+        wishListRoom.average_rating = product.average_rating
+        wishListRoom.colors = Gson().toJson(mColor)
+        wishListRoom.image = requestModel.image
+        wishListRoom.name = requestModel.name
+        wishListRoom.regular_price = requestModel.regular_price
+        wishListRoom.sale_price = requestModel.sale_price
+        wishListRoom.size = Gson().toJson(mSize)
+        wishListRoom.product_id = requestModel.product_id
+        wishListRoom.item_id = requestModel.item_id
+
+        executorService.execute { mWishListDAO.insertWishList(wishListRoom) }
         list.add(requestModel)
         updateWishList(list)
         snackBar("Successfully added")
@@ -186,10 +240,19 @@ fun Activity.updateWishList(list: ArrayList<WishList>) {
 
 fun Activity.removeWishList(aItemId: String?, onApiSuccess: (ArrayList<WishList>) -> Unit) {
     val list = getWishlist()
+    lateinit var mWishListDAO: WishListDAO
+    val executorService: ExecutorService = Executors.newSingleThreadExecutor()
+    val db = ShopDatabase.getDatabase(this)
+    mWishListDAO = db!!.wishlistDAO()!!
+
     getWishlist().forEachIndexed { index, productReviewData ->
         if (productReviewData.item_id == aItemId) {
             list.removeAt(index)
         }
+    }
+
+    executorService.execute{
+        mWishListDAO.deleteWishList(mWishListDAO.getWishListByItemId(aItemId))
     }
     updateWishList(list)
     onApiSuccess(list)

@@ -67,7 +67,7 @@ class ProductDetailActivity : AppBaseActivity() {
         tvItemProductOriginalPrice.applyStrike()
         setCustomFont()
         if (isLoggedIn()) {
-            mFlag = isFavourite(mProductModel.id)
+            mFlag = isFavourite(mProductModel.id ?: "")
             if (mFlag != "-1") {
                 changeFavIcon(R.drawable.ic_heart_fill, R.color.favourite_backround, R.color.colorPrimary)
             } else {
