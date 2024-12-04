@@ -43,7 +43,7 @@
                 android:textSize="@dimen/font_size_xlarge" />
         </LinearLayout>
 
-        <com.iqonic.shophop.utils.scratch.ScratchTextView
+        <com.iqonic.phonphon_store.utils.scratch.ScratchTextView
             android:id="@+id/scratch_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

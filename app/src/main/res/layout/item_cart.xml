@@ -3,10 +3,10 @@
     <data>
         <variable
                 name="model"
-                type="com.iqonic.shophop.models.Key"/>
+                type="com.iqonic.phonphon_store.models.Key"/>
         <variable
             name="callback"
-            type="com.iqonic.shophop.base.BaseRecyclerAdapter.OnClickListener" />
+            type="com.iqonic.phonphon_store.base.BaseRecyclerAdapter.OnClickListener" />
     </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

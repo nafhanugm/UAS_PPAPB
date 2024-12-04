@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSubHeading" />
 
-    <com.iqonic.shophop.utils.dotsindicator.DotsIndicator
+    <com.iqonic.phonphon_store.utils.dotsindicator.DotsIndicator
         android:id="@+id/dots"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_30sdp"

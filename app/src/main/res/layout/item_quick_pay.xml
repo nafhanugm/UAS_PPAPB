@@ -5,14 +5,14 @@
 
         <variable
             name="model"
-            type="com.iqonic.shophop.models.Card" />
+            type="com.iqonic.phonphon_store.models.Card" />
 
         <variable
             name="callback"
-            type="com.iqonic.shophop.base.BaseRecyclerAdapter.OnClickListener" />
+            type="com.iqonic.phonphon_store.base.BaseRecyclerAdapter.OnClickListener" />
     </data>
 
-    <com.iqonic.shophop.utils.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.iqonic.phonphon_store.utils.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/swipeLayout"
         android:layout_width="match_parent"
@@ -217,5 +217,5 @@
             </androidx.cardview.widget.CardView>
         </FrameLayout>
 
-    </com.iqonic.shophop.utils.swipereveallayout.SwipeRevealLayout>
+    </com.iqonic.phonphon_store.utils.swipereveallayout.SwipeRevealLayout>
 </layout>

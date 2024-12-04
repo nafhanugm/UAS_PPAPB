@@ -5,11 +5,11 @@
 
         <variable
             name="model"
-            type="com.iqonic.shophop.models.Address" />
+            type="com.iqonic.phonphon_store.models.Address" />
 
         <variable
             name="callback"
-            type="com.iqonic.shophop.base.BaseRecyclerAdapter.OnClickListener" />
+            type="com.iqonic.phonphon_store.base.BaseRecyclerAdapter.OnClickListener" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

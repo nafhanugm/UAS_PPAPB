@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.iqonic.shophop.models.ProductModel" />
+            type="com.iqonic.phonphon_store.models.ProductModel" />
 
     </data>
 
@@ -60,7 +60,7 @@
                             android:fitsSystemWindows="true"
                             android:overScrollMode="never" />
 
-                        <com.iqonic.shophop.utils.dotsindicator.DotsIndicator
+                        <com.iqonic.phonphon_store.utils.dotsindicator.DotsIndicator
                             android:id="@+id/dots"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/_30sdp"

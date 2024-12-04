@@ -6,11 +6,11 @@
 
         <variable
                 name="model"
-                type="com.iqonic.shophop.models.WishList"/>
+                type="com.iqonic.phonphon_store.models.WishList"/>
 
         <variable
                 name="callback"
-                type="com.iqonic.shophop.base.BaseRecyclerAdapter.OnClickListener"/>
+                type="com.iqonic.phonphon_store.base.BaseRecyclerAdapter.OnClickListener"/>
     </data>
 
     <RelativeLayout

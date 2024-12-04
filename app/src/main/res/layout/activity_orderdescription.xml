@@ -43,7 +43,7 @@
 
 
 
-                    <com.iqonic.shophop.utils.CircleView
+                    <com.iqonic.phonphon_store.utils.CircleView
                         android:id="@+id/ivCircle"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"
@@ -51,14 +51,14 @@
                         app:color="@color/track_grey"
                         app:radius="@dimen/_4sdp" />
 
-                    <com.iqonic.shophop.utils.LineView
+                    <com.iqonic.phonphon_store.utils.LineView
                         android:id="@+id/ivLine"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_40sdp"
                         android:layout_below="@id/ivCircle"
                         app:line_color="@color/track_grey" />
 
-                    <com.iqonic.shophop.utils.CircleView
+                    <com.iqonic.phonphon_store.utils.CircleView
                         android:id="@+id/ivCircle1"
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_20sdp"

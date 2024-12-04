@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.iqonic.shophop">
+    package="com.iqonic.phonphon_store">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".ShopHopApp"
+        android:name="com.iqonic.phonphon_store.ShopHopApp"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +25,7 @@
             android:value="@string/app_id" />
 
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.iqonic.phonphon_store.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
@@ -36,102 +36,102 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SubCategoryActivity"
+            android:name="com.iqonic.phonphon_store.activity.SubCategoryActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".AppBaseActivity" />
+        <activity android:name="com.iqonic.phonphon_store.AppBaseActivity" />
         <activity
-            android:name=".activity.SignInUpActivity"
+            android:name="com.iqonic.phonphon_store.activity.SignInUpActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
-            android:name=".activity.OTPActivity"
+            android:name="com.iqonic.phonphon_store.activity.OTPActivity"
             android:windowSoftInputMode="stateVisible" />
         <activity
-            android:name=".activity.WalkThroughActivity"
+            android:name="com.iqonic.phonphon_store.activity.WalkThroughActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.DashBoardActivity"
+            android:name="com.iqonic.phonphon_store.activity.DashBoardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.OrderDescriptionActivity"
+            android:name="com.iqonic.phonphon_store.activity.OrderDescriptionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OrderActivity"
+            android:name="com.iqonic.phonphon_store.activity.OrderActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ProductDetailActivity"
+            android:name="com.iqonic.phonphon_store.activity.ProductDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CollapsingTheme" />
         <activity
-            android:name=".activity.AddAddressActivity"
+            android:name="com.iqonic.phonphon_store.activity.AddAddressActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OrderSummaryActivity"
+            android:name="com.iqonic.phonphon_store.activity.OrderSummaryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TrackItemActivity"
+            android:name="com.iqonic.phonphon_store.activity.TrackItemActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.PaymentActivity"
+            android:name="com.iqonic.phonphon_store.activity.PaymentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AccountActivity"
+            android:name="com.iqonic.phonphon_store.activity.AccountActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.MyCartActivity"
+            android:name="com.iqonic.phonphon_store.activity.MyCartActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SearchActivity"
+            android:name="com.iqonic.phonphon_store.activity.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ViewAllProductActivity"
+            android:name="com.iqonic.phonphon_store.activity.ViewAllProductActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.RewardActivity"
+            android:name="com.iqonic.phonphon_store.activity.RewardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AddressManagerActivity"
+            android:name="com.iqonic.phonphon_store.activity.AddressManagerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.EditProfileActivity"
+            android:name="com.iqonic.phonphon_store.activity.EditProfileActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.EmailActivity"
+            android:name="com.iqonic.phonphon_store.activity.EmailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ContactUsActivity"
+            android:name="com.iqonic.phonphon_store.activity.ContactUsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FAQActivity"
+            android:name="com.iqonic.phonphon_store.activity.FAQActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.SettingActivity"
+            android:name="com.iqonic.phonphon_store.activity.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.CardActivity"
+            android:name="com.iqonic.phonphon_store.activity.CardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.HelpActivity"
+            android:name="com.iqonic.phonphon_store.activity.HelpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.OfferActivity"
+            android:name="com.iqonic.phonphon_store.activity.OfferActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.QuickPayActivity"
+            android:name="com.iqonic.phonphon_store.activity.QuickPayActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.AdminActivity"
+            android:name="com.iqonic.phonphon_store.activity.AdminActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.AdminEditProductActivity"
+        <activity android:name="com.iqonic.phonphon_store.activity.AdminEditProductActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.AdminAddProductActivity"
+        <activity android:name="com.iqonic.phonphon_store.activity.AdminAddProductActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.AdminDetailProductActivity"
+        <activity android:name="com.iqonic.phonphon_store.activity.AdminDetailProductActivity"
             android:screenOrientation="portrait" />
 
         <provider

@@ -5,11 +5,11 @@
 
         <variable
             name="model"
-            type="com.iqonic.shophop.models.MyOrderData" />
+            type="com.iqonic.phonphon_store.models.MyOrderData" />
 
         <variable
             name="callback"
-            type="com.iqonic.shophop.base.BaseRecyclerAdapter.OnClickListener" />
+            type="com.iqonic.phonphon_store.base.BaseRecyclerAdapter.OnClickListener" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -162,7 +162,7 @@
                 android:visibility="gone">
 
 
-                <com.iqonic.shophop.utils.CircleView
+                <com.iqonic.phonphon_store.utils.CircleView
                     android:id="@+id/ivCircle"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
@@ -170,14 +170,14 @@
                     app:color="@color/yellow"
                     app:radius="@dimen/spacing_control" />
 
-                <com.iqonic.shophop.utils.LineView
+                <com.iqonic.phonphon_store.utils.LineView
                     android:id="@+id/ivLine"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_35sdp"
                     android:layout_below="@id/ivCircle"
                     app:line_color="@color/track_grey" />
 
-                <com.iqonic.shophop.utils.CircleView
+                <com.iqonic.phonphon_store.utils.CircleView
                     android:id="@+id/ivCircle1"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"

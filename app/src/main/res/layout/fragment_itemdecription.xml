@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.iqonic.shophop.models.ProductModel" />
+            type="com.iqonic.phonphon_store.models.ProductModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,7 +17,7 @@
         android:orientation="vertical"
         hnc:ignore="MissingPrefix">
 
-        <com.iqonic.shophop.utils.ExpandableTextView
+        <com.iqonic.phonphon_store.utils.ExpandableTextView
             android:id="@+id/txtDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
